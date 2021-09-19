@@ -942,11 +942,6 @@ When the outermost containing struct variable of a fixed-size buffer member is a
 In an unsafe context, a local variable declaration ([§13.6.2](statements.md#1362-local-variable-declarations)) may include a stack allocation initializer, which allocates a block of memory from the call stack.
 
 ```ANTLR
-local_variable_initializer
-    : ...
-    | stackalloc_initializer
-    ;
-
 stackalloc_initializer
     : 'stackalloc' unmanaged_type '[' expression ']'
     | 'stackalloc' unmanaged_type? '[' expression? ']' stackalloc_initializer_elements
